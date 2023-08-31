@@ -17,8 +17,8 @@ export default function ProductCard() {
   return (
     <Box
       sx={{
-        display: "flex",
-        flexDirection: "column",
+        // display: "flex",
+        // flexDirection: "column",
         border: "1px solid",
         borderRadius: "15px",
         boxSizing: "border-box",
@@ -34,16 +34,7 @@ export default function ProductCard() {
         },
       }}
     >
-      <Stack
-        direction="row" // Set the direction to "row"
-        alignItems="center" // Align items vertically
-        spacing={1} // Adjust the spacing as needed
-        sx={{
-          maxWidth: "100%", // Adjust to your desired width
-          margin: "0px auto",
-          overflowX: "auto", // Allow horizontal scrolling if necessary
-        }}
-      >
+      <Stack>
         {/* <Image width={50} height={50} src={logo} alt="a" /> */}
         {/* <div>
           <img
@@ -57,9 +48,9 @@ export default function ProductCard() {
         <Typography
           sx={{
             fontSize: {
-              xs: 15,
-              md: 20,
-              xl: 30,
+              xs: 10,
+              md: 15,
+              xl: 20,
             },
           }}
           variant="h5"
@@ -69,9 +60,9 @@ export default function ProductCard() {
         <Typography
           sx={{
             fontSize: {
-              xs: 10,
-              md: 15,
-              xl: 25,
+              xs: 7,
+              md: 10,
+              xl: 15,
             },
           }}
           variant="body1"

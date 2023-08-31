@@ -9,8 +9,9 @@ const Products = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-around",
-        width: "100%",
+        width: "90%",
         textAlign: "center",
+        margin: "0px auto",
       }}
     >
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, i) => {
