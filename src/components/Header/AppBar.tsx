@@ -35,24 +35,39 @@ export default function SearchAppBar() {
     //     </Toolbar>
     //   </AppBar>
     // </Box>
-    <Stack sx={{ display: "flex", flexDirection: "row" }}>
-      <IconButton aria-label="search" size="large">
+    <Stack
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column",
+          sm: "row",
+        },
+      }}
+    >
+      <IconButton
+        aria-label="search"
+        size="large"
+        sx={{ width: "50px", padding: "0" }}
+      >
         <SearchIcon fontSize="inherit" />
       </IconButton>
 
-      <TextField
-        sx={{
-          width: {
-            xs: "5rem",
-            sm: "15rem",
-            md: "30rem",
-            xl: "40rem",
-          },
-        }}
-        id="standard-basic"
-        label="Search...."
-        variant="standard"
-      />
+      <Stack>
+        <TextField
+          sx={{
+            width: "100%",
+            height: "5px",
+            fontSize: {
+              xs: 4,
+              sm: 10,
+              md: 15,
+            },
+          }}
+          id="standard-basic"
+          label="Search..."
+          variant="standard"
+        />
+      </Stack>
     </Stack>
   );
 }

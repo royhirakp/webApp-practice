@@ -12,6 +12,10 @@ const Products = () => {
         width: "90%",
         textAlign: "center",
         margin: "0px auto",
+        marginTop: {
+          xs: "26px",
+          sm: "15px",
+        },
       }}
     >
       {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, i) => {

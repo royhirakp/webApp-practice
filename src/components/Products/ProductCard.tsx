@@ -12,7 +12,17 @@ import { Stack, Box } from "@mui/material";
 // import Button from '@mui/material-next/Button';
 // import logo from "../../data/headerLogo.png";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
-
+const buttonStyle = {
+  textTransform: "none",
+  display: "flex",
+  width: "auto",
+  padding: 0,
+  fontSize: {
+    xs: 5,
+    md: 10,
+    xl: 15,
+  },
+};
 export default function ProductCard() {
   return (
     <Box
@@ -23,7 +33,11 @@ export default function ProductCard() {
         borderRadius: "15px",
         boxSizing: "border-box",
         padding: "5px",
-        margin: "1rem",
+        margin: {
+          xs: "1px",
+          sm: "2px",
+          ml: "1rem",
+        },
         // flexGrow: 1,
         maxWidth: {
           xs: "100%",
@@ -48,7 +62,7 @@ export default function ProductCard() {
         <Typography
           sx={{
             fontSize: {
-              xs: 10,
+              xs: 11,
               md: 15,
               xl: 20,
             },
@@ -60,7 +74,7 @@ export default function ProductCard() {
         <Typography
           sx={{
             fontSize: {
-              xs: 7,
+              xs: 10,
               md: 10,
               xl: 15,
             },
@@ -73,9 +87,24 @@ export default function ProductCard() {
           nostrum? Quasi doloremque molestiae temporibus!
         </Typography>
       </Stack>
-      <Stack direction="row">
-        <Button variant="outlined">Share</Button>
-        <Button variant="outlined">Learn More</Button>
+      <Stack
+        justifyContent="center"
+        marginLeft="auto"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
+        }}
+      >
+        <Button sx={buttonStyle} variant="outlined">
+          Share
+        </Button>
+        <Button sx={buttonStyle} variant="outlined">
+          Learn More
+        </Button>
       </Stack>
     </Box>
   );

@@ -7,21 +7,20 @@ const HeaderIcon = () => {
     <Stack
       sx={{
         display: "flex",
-        flexDirection: "inherit",
+        flexDirection: { sm: "row" },
         justifyContent: "space-between",
       }}
     >
-      {/* <Stack> */}
-      <Image style={{ minWidth: 69 }} height={50} src={logo} alt="hii" />
-      {/* </Stack> */}
+      <Stack>
+        <Image src={logo} alt="hii" />
+      </Stack>
       <Typography
         sx={{
           fontSize: {
-            xs: 15,
-            md: 20,
-            xl: 30,
+            xs: 10,
+            md: 15,
+            lg: 20,
           },
-          //   ml: 2,
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -29,7 +28,7 @@ const HeaderIcon = () => {
         // variant="h2"
         // component="h2"
       >
-        Web App
+        <b> Web App</b>
       </Typography>
     </Stack>
   );

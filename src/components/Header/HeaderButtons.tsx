@@ -8,7 +8,9 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useTheme } from "@mui/material/styles";
 const HeaderButtons = () => {
+  const theme = useTheme();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -43,22 +45,27 @@ const HeaderButtons = () => {
 
       {/* menu button  */}
 
-      <IconButton
-        size="large"
-        edge="start"
-        color="inherit"
-        aria-label="open drawer"
-        onClick={handleClick}
-        sx={{
-          mr: 2,
-          display: {
-            md: "none",
-            xs: "block",
-          },
-        }}
-      >
-        <MenuIcon />
-      </IconButton>
+      <Stack sx={{ width: "10%" }}>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleClick}
+          sx={{
+            mr: 2,
+            width: "100%",
+            display: {
+              md: "none",
+            },
+            [theme.breakpoints.down("sm")]: {
+              width: "auto", // Adjust this value as needed
+            },
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+      </Stack>
 
       <Menu
         id="basic-menu"
