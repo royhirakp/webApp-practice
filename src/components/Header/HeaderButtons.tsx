@@ -45,7 +45,14 @@ const HeaderButtons = () => {
 
       {/* menu button  */}
 
-      <Stack sx={{ width: "10%" }}>
+      <Stack
+        sx={{
+          width: "10%",
+          display: {
+            md: "none",
+          },
+        }}
+      >
         <IconButton
           size="large"
           edge="start"
@@ -55,9 +62,7 @@ const HeaderButtons = () => {
           sx={{
             mr: 2,
             width: "100%",
-            display: {
-              md: "none",
-            },
+
             [theme.breakpoints.down("sm")]: {
               width: "auto", // Adjust this value as needed
             },
