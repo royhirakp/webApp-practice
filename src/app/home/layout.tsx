@@ -9,9 +9,18 @@ export default function DashboardLayout({
     <Box
       sx={{
         backgroundColor: "#dedeea",
-        paddingTop: "5%",
-        paddingLeft: "7%",
-        paddingRight: "7%",
+        paddingTop: {
+          xs: "5%",
+          md: "1%",
+        },
+        paddingLeft: {
+          xs: "4%",
+          md: "7%",
+        },
+        paddingRight: {
+          xs: "4%",
+          md: "7%",
+        },
         // paddingTop: {
         //   xs: "",
         //   md: "1rem",
